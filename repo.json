@@ -1,0 +1,8 @@
+{
+    "name": "mono",
+    "description": "Cmono",
+    "manifestVersion": 1,
+    "pluginLists": [
+      "https://github.com/dennisyaj/mc2-cloudstream/raw/builds/plugins.json"
+    ]
+}

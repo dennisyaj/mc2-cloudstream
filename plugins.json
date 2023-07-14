@@ -1,0 +1,21 @@
+[
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=monoschinos2.com&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/dennisyaj/mc2-cloudstream",
+        "fileSize": 16766,
+        "status": 1,
+        "language": "es",
+        "authors": [
+            
+        ],
+        "tvTypes": [
+            "Anime",
+            "OVA"
+        ],
+        "version": 1,
+        "internalName": "MonoschinosProvider",
+        "url": "https://raw.githubusercontent.com/dennisyaj/mc2-cloudstream/builds/MonoschinosProvider.cs3",
+        "name": "MonoschinosProvider"
+    }
+]
