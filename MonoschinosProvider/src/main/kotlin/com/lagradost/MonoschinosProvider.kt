@@ -50,7 +50,7 @@ class MonoschinosProvider : MainAPI() {
                 "Capítulos actualizados",
                 app.get(mainUrl, timeout = 120).document.select(".col-6").map {
                     val title = it.selectFirst("p.animetitles")?.text() ?: it.selectFirst(".animetitles")?.text() ?: ""
-                    val poster = it.selectFirst(".animeimghv")!!.attr("data-src")
+                    val poster = it.selectFirst(".animeimgdiv")!!.attr("data-src")
                     val epRegex = Regex("episodio-(\\d+)")
                     val url = it.selectFirst("a")?.attr("href")!!.replace("ver/", "anime/")
                         .replace(epRegex, "sub-espanol")
@@ -119,7 +119,7 @@ class MonoschinosProvider : MainAPI() {
         val episodes = doc.select("div.col-item").map {
             val name = it.selectFirst("p.animetitles")!!.text()
             val link = it.selectFirst("a")!!.attr("href")
-            val epThumb = it.selectFirst(".animeimghv")!!.attr("data-src")
+            val epThumb = it.selectFirst(".animeimgdiv")!!.attr("data-src")
             Episode(link, name, posterUrl = epThumb)
         }
         return newAnimeLoadResponse(title, url, getType(type)) {
