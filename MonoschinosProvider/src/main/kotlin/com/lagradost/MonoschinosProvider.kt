@@ -119,7 +119,7 @@ class MonoschinosProvider : MainAPI() {
         val episodes = doc.select("div.col-item").map {
             val name = it.selectFirst("p.animetitles")!!.text()
             val link = it.selectFirst("a")!!.attr("href")
-            val epThumb = it.selectFirst("img.animeimgdiv")!!.attr("data-src")
+            val epThumb = it.selectFirst(".animeimgdiv img")!!.attr("data-src")
             Episode(link, name, posterUrl = epThumb)
         }
         return newAnimeLoadResponse(title, url, getType(type)) {
